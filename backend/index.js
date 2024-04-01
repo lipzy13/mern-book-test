@@ -6,7 +6,7 @@ import booksRouter from "./routes/booksRoute.js";
 const app = express();
 app.use(express.json());
 
-app.use(cors({}));
+app.use(cors());
 
 app.get("/", (request, response) => {
   console.log(request);
@@ -26,3 +26,5 @@ mongoose
   .catch((error) => {
     console.log(error);
   });
+
+  export default app;
